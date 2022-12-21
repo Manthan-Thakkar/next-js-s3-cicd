@@ -1,0 +1,20 @@
+{
+  "name": "testapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "serverless --aws-profile default"
+  },
+  "dependencies": {
+    "@next/font": "13.0.7",
+    "next": "12.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router": "6.5.0",
+    "serverless": "3.25.1"
+  }
+}
