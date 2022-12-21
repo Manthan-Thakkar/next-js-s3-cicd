@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "serverless --aws-profile default"
+    "deploy": "serverless --aws-profile default",
+    "export": "next export"
   },
   "dependencies": {
     "@next/font": "13.0.7",

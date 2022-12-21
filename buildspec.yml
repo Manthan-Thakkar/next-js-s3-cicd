@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm install
+      # - CI=false npm run build
+      - npm run build && npm run export
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - ls
+artifacts:
+  files:
+    - "**/*"
+  base-directory: out

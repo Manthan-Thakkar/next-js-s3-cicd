@@ -1,11 +1,15 @@
 /* next.config.js */
 module.exports = {
-  target: 'serverless', // <- add here
-  webpack: config => {
+  // target: 'serverless', // <- add here
+  webpack: (config) => {
     // Fixes npm packages that depend on `fs` module
-    config.node = {
-      fs: 'empty'
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
     }
-    return config
-  }
-}
+    return config;
+  },
+  images: {
+    loader: "akamai",
+    path: "",
+  },
+};
