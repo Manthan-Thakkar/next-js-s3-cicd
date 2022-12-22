@@ -13,6 +13,7 @@ phases:
       - npm install
       # - CI=false npm run build
       - npm run build && npm run export
+      - echo $dev
   post_build:
     commands:
       - echo Build completed on `date`
